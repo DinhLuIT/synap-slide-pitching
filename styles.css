@@ -307,6 +307,7 @@ html,body {
 .sol-visual {
     display:flex; align-items:stretch; justify-content:stretch;
     padding:1.5rem; background:var(--bg-card-sub);
+    min-height:0; min-width:0;
 }
 
 /* Placeholder Image */
@@ -314,9 +315,15 @@ html,body {
     width:100%; height:100%; border-radius:14px;
     border:1px solid var(--border-strong); overflow:hidden;
     position:relative; display:flex; align-items:center; justify-content:center;
-    background:var(--bg-card);
+    background:var(--bg-main);
+    min-height:0; min-width:0;
 }
-.img-placeholder > img { width:100%; height:100%; object-fit:cover; display:block; }
+.img-placeholder > img { 
+    width:100%; height:100%; 
+    object-fit:contain; 
+    object-position:center;
+    display:block; 
+}
 
 /* ─── CSS Product Mockup ─── */
 .product-mockup {
@@ -403,6 +410,7 @@ html,body {
 .workflow-mockup {
     display:flex; align-items:center; justify-content:center;
     padding:1rem 2rem; gap:0; width:100%; height:100%;
+    transform:scale(1.75);
 }
 .wf-step {
     display:flex; flex-direction:column; align-items:center; gap:0.6rem;
