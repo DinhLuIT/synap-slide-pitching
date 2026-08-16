@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYNAP – Native Business OS | Pitch Deck</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Mobile Rotate Overlay -->
+    <div class="rotate-device">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:1.5rem;">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+            <path d="M12 18h.01"></path>
+            <path d="M8 6h.01"></path>
+            <path d="M16 6h.01"></path>
+            <path d="M15 13l-3 3-3-3"></path>
+            <path d="M12 16V8"></path>
+        </svg>
+        <h2 style="font-size:1.5rem; color:var(--text-pure); margin-bottom:0.5rem;">Vui lòng xoay ngang màn hình</h2>
+        <p style="color:var(--text-dim); font-size:0.95rem; line-height:1.5; max-width:280px;">Slide được tối ưu hóa cho màn hình 16:9. Hãy xoay ngang thiết bị để có trải nghiệm xem tốt nhất.</p>
+    </div>
+    <div class="progress-bar" id="progressBar"></div>
+    <div class="slide-counter" id="slideCounter">1 / 15</div>
+
+    <div class="deck" id="deck">
+
+        <!-- ══════ SLIDE 1 — TITLE ══════ -->
+        <section class="slide active">
+            <div class="card layout-hero">
+                <div class="hero-left">
+                    <div class="logo-box">
+                        <img src="logo_synap.png" alt="Synap Logo" class="s1-logo">
+                    </div>
+                    <h1 class="hero-name">SYNAP</h1>
+                    <p class="hero-sub">Native Business OS</p>
+                    <div class="hero-divider"></div>
+                    <p class="hero-tagline">"Tomorrow Begins with Trust"</p>
+                </div>
+                <div class="hero-right">
+                    <p class="hero-hook">
+                        Dữ liệu doanh nghiệp đang <span class="text-highlight">rò rỉ âm thầm</span> qua ma trận ứng dụng rời rạc.
+                    </p>
+                    <div class="hero-pills">
+                        <span class="pill"><span class="pill-dot"></span>Secure Chat</span>
+                        <span class="pill"><span class="pill-dot"></span>Agile &amp; Kanban</span>
+                        <span class="pill"><span class="pill-dot"></span>Zero-Download Docs</span>
+                        <span class="pill"><span class="pill-dot"></span>Local RAG AI</span>
+                        <span class="pill"><span class="pill-dot"></span>Dynamic Watermark</span>
+                        <span class="pill"><span class="pill-dot"></span>Local-First (CRDTs)</span>
+                        <span class="pill"><span class="pill-dot"></span>Self-Hosted (On-Prem)</span>
+                        <span class="pill"><span class="pill-dot"></span>1-Touch Deploy</span>
+                    </div>
+                    <div class="hero-mvp-badge">
+                        <span class="mvp-dot"></span>
+                        MVP hoàn chỉnh · Sẵn sàng thương mại hóa
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════ SLIDE 12 — TEAM ══════ -->
+        <section class="slide">
+            <div class="card layout-team">
+                <div class="team-header">
+                    <div class="label-tag">01 — Đội ngũ thực thi</div>
+                    <h2 class="section-title">Đội ngũ phát triển dự án.</h2>
+                </div>
+                <div class="team-grid">
+                    <div class="tm-card">
+                        <div class="tm-avatar">
+                            <img src="avatar_tai.jpg" alt="Hữu Tài" onerror="this.style.display='none'">
+                            <div class="tm-init">TT</div>
+                        </div>
+                        <div class="tm-name">Trần Võ Hữu Tài</div>
+                        <div class="tm-role">Nhóm Trưởng · Solution Architect</div>
+                        <div class="tm-achieve">Fullstack &amp; System Design</div>
+                    </div>
+                    <div class="tm-card">
+                        <div class="tm-avatar">
+                            <img src="avatar_dinh.jpg" alt="Nhựt Đình" onerror="this.style.display='none'">
+                            <div class="tm-init">LĐ</div>
+                        </div>
+                        <div class="tm-name">Lu Nhựt Đình</div>
+                        <div class="tm-role">Backend Lead · Golang</div>
+                        <div class="tm-achieve">Distributed Systems &amp; Microservices</div>
+                    </div>
+                    <div class="tm-card">
+                        <div class="tm-avatar">
+                            <img src="avatar_kien.jpg" alt="Trung Kiên" onerror="this.style.display='none'">
+                            <div class="tm-init">PK</div>
+                        </div>
+                        <div class="tm-name">Phan Trung Kiên</div>
+                        <div class="tm-role">Frontend &amp; Security Lead</div>
+                        <div class="tm-achieve">CRDTs &amp; Zero-Download</div>
+                    </div>
+                    <div class="tm-card">
+                        <div class="tm-avatar">
+                            <img src="avatar_anh.jpg" alt="Hoàng Anh" onerror="this.style.display='none'">
+                            <div class="tm-init">HA</div>
+                        </div>
+                        <div class="tm-name">Phạm Nguyễn Hoàng Anh</div>
+                        <div class="tm-role">Business Analyst</div>
+                        <div class="tm-achieve">Phân tích Thị trường &amp; Tài chính</div>
+                    </div>
+                </div>
+                <div class="mentor-bar">
+                    <span class="mentor-tag">CỐ VẤN DỰ ÁN</span>
+                    <span class="mentor-names">Cô Lê Nhựt Mi &amp; Thầy Nguyễn Đức Minh</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ══════ SLIDE 2 — PROBLEM ══════ -->
+        <section class="slide">
+            <div class="card layout-problem">
+                <div class="prob-stat-side">
+                    <div class="label-tag">02 — Vấn đề</div>
+                    <div class="stat-pair">
+                        <div class="big-stat">
+                            <div class="big-stat-num">20<span>%</span></div>
+                            <div class="big-stat-label">thời gian lãng phí do chuyển đổi ứng dụng</div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="big-stat big-stat--secondary">
+                            <div class="big-stat-num big-stat-num--sm">305<span class="unit-sm">apps</span></div>
+                            <div class="big-stat-label">mỗi doanh nghiệp phải quản lý đồng thời</div>
+                        </div>
+                    </div>
+                    <div class="stat-src">McKinsey &amp; HBR · SaaS Market Report 2026</div>
+                </div>
+                <div class="prob-kw-side">
+                    <h2 class="section-title">Chảy máu hiệu suất và dữ liệu mỗi ngày.</h2>
+                    <div class="kw-list">
+                        <div class="kw-item">
+                            <span class="kw-dot"></span>
+                            <span><strong>Ma trận App phân mảnh</strong> — Zalo, Drive, Trello, Zoom</span>
+                        </div>
+                        <div class="kw-item kw-item--alert">
+                            <span class="kw-dot kw-dot--red"></span>
+                            <span><strong>Shadow IT</strong> — File tải về = mất kiểm soát hoàn toàn</span>
+                        </div>
+                        <div class="kw-item kw-item--alert">
+                            <span class="kw-dot kw-dot--red"></span>
+                            <span><strong>Không Audit Log</strong> — Không truy vết, không thu hồi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════ SLIDE 3 — MARKET OPPORTUNITY ══════ -->
+        <section class="slide">
+            <div class="card layout-market">
+                <div class="label-tag">03 — Cơ hội thị trường</div>
+                <h2 class="section-title">Khoảng trống On-Premise chưa ai lấp đầy.</h2>
+                <div class="three-stats">
+                    <div class="ts-item">
+                        <div class="ts-tag">TAM · Tổng dung lượng</div>
+                        <div class="ts-num">&gt;1M</div>
+                        <div class="ts-label">Doanh nghiệp tại Việt Nam</div>
+                        <div class="ts-cagr">CAGR 13.2% đến 2030</div>
+                    </div>
+                    <div class="ts-item">
+                        <div class="ts-tag">SAM · Thị trường mục tiêu</div>
+                        <div class="ts-num">60K</div>
+                        <div class="ts-label">DN có ngân sách CNTT chuyên biệt</div>
+                    </div>
+                    <div class="ts-item ts-featured">
+                        <div class="ts-tag ts-tag--primary">SOM · Mục tiêu 2 năm</div>
+                        <div class="ts-num">1.200</div>
+                        <div class="ts-label">Y tế · Tài chính · Công nghệ · Luật</div>
+                        <div class="ts-value">~60 Tỷ VNĐ</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════ SLIDE 4 — SOLUTION ══════ -->
+        <section class="slide">
+            <div class="card layout-solution">
+                <div class="sol-header">
+                    <div class="label-tag">04 — Giải pháp</div>
+                    <h2 class="section-title">Một nền tảng. An toàn tuyệt đối.</h2>
+                </div>
+                <div class="sol-body">
+                    <div class="sol-features">
+                        <div class="sf-item">
+                            <span class="sf-badge">Bảo mật</span>
+                            <h3>Zero-Download &amp; Dynamic Watermark</h3>
+                        </div>
+                        <div class="sf-item">
+                            <span class="sf-badge">Tốc độ</span>
+                            <h3>Local-First — phản hồi &lt;100ms</h3>
+                        </div>
+                        <div class="sf-item sf-item--accent">
+                            <span class="sf-badge sf-badge--ai">Độc quyền</span>
+                            <h3>Local RAG AI — Phân quyền AI-Aware</h3>
+                        </div>
+                    </div>
+                    <div class="sol-visual">
+                        <div class="img-placeholder">
+                            <img src="dashboard.png" alt="Synap Dashboard" onerror="this.style.display='none'">
+                            <div class="product-mockup" id="dashMockup">
+                                <div class="mock-chrome">
+                                    <span class="mock-dot mock-dot--red"></span>
+                                    <span class="mock-dot mock-dot--yellow"></span>
+                                    <span class="mock-dot mock-dot--green"></span>
+                                    <span class="mock-url">synap.io · Dashboard</span>
+                                </div>
+                                <div class="mock-body">
+                                    <div class="mock-sidebar">
+                                        <div class="mock-nav-item mock-nav-item--active"></div>
+                                        <div class="mock-nav-item"></div>
+                                        <div class="mock-nav-item"></div>
+                                        <div class="mock-nav-item"></div>
+                                        <div class="mock-nav-item"></div>
+                                    </div>
+                                    <div class="mock-main">
+                                        <div class="mock-chat-area">
+                                            <div class="mock-msg mock-msg--them"><div class="mock-bubble mock-bubble--them"></div></div>
+                                            <div class="mock-msg mock-msg--me"><div class="mock-bubble mock-bubble--me"></div></div>
+                                            <div class="mock-msg mock-msg--them"><div class="mock-bubble mock-bubble--them mock-bubble--short"></div></div>
+                                            <div class="mock-task-card">
+                                                <div class="mock-task-label">TASK CREATED</div>
+                                                <div class="mock-task-title"></div>
+                                                <div class="mock-task-meta"></div>
+                                            </div>
+                                            <div class="mock-msg mock-msg--me"><div class="mock-bubble mock-bubble--me mock-bubble--short"></div></div>
+                                        </div>
+                                        <div class="mock-input">
+                                            <div class="mock-input-bar"></div>
+                                        </div>
+                                    </div>
+                                    <div class="mock-panel">
+                                        <div class="mock-kanban-col">
+                                            <div class="mock-kanban-header"></div>
+                                            <div class="mock-kanban-card"></div>
+                                            <div class="mock-kanban-card mock-kanban-card--hl"></div>
+                                        </div>
+                                        <div class="mock-kanban-col">
+                                            <div class="mock-kanban-header"></div>
+                                            <div class="mock-kanban-card"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════ SLIDE 5 — HOW IT WORKS ══════ -->
+        <section class="slide">
+            <div class="card layout-how">
+                <div class="label-tag">05 — Luồng vận hành</div>
+                <h2 class="section-title">Không bao giờ phải đổi ứng dụng.</h2>
+                <div class="how-flow">
+                    <div class="flow-step">
+                        <div class="flow-num">01</div>
+                        <h4>Chat bảo mật</h4>
+                        <p>Giao tiếp thời gian thực</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="flow-num">02</div>
+                        <h4>Click-to-Task</h4>
+                        <p>Tin nhắn → Kanban</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <div class="flow-num">03</div>
+                        <h4>Zero-Download</h4>
+                        <p>Xem trực tiếp + Watermark</p>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step flow-step--end">
+                        <div class="flow-num">04</div>
+                        <h4>Local RAG AI</h4>
+                        <p>Truy vấn có phân quyền</p>
+                    </div>
+                </div>
+                <div class="how-mockup-strip">
+                    <div class="img-placeholder img-placeholder--wide">
+                        <img src="workflow.png" alt="Synap Workflow" onerror="this.style.display='none'">
+                        <div class="workflow-mockup">
+                            <div class="wf-step">
+                                <div class="wf-icon wf-icon--chat">
+                                    <div class="wf-bubble"></div>
+                                    <div class="wf-bubble wf-bubble--alt"></div>
+                                </div>
+                                <span>Chat</span>
+                            </div>
+                            <div class="wf-arrow">→</div>
+                            <div class="wf-step">
+                                <div class="wf-icon wf-icon--task">
+                                    <div class="wf-card"></div>
+                                    <div class="wf-cursor"></div>
+                                </div>
+                                <span>1-Click Task</span>
+                            </div>
+                            <div class="wf-arrow">→</div>
+                            <div class="wf-step">
+                                <div class="wf-icon wf-icon--doc">
+                                    <div class="wf-doc"></div>
+                                    <div class="wf-watermark">WM</div>
+                                </div>
+                                <span>Zero-Download</span>
+                            </div>
+                            <div class="wf-arrow">→</div>
+                            <div class="wf-step">
+                                <div class="wf-icon wf-icon--ai">
+                                    <div class="wf-ai-line"></div>
+                                    <div class="wf-ai-line wf-ai-line--alt"></div>
+                                    <div class="wf-ai-line"></div>
+                                </div>
+                                <span>AI Assistant</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════ SLIDE 6 — COMPETITIVE MATRIX (moved up) ══════ -->
+        <section class="slide">
+            <div class="card layout-compete">
+                <div class="label-tag">06 — Lợi thế cạnh tranh</div>
+                <h2 class="section-title">Synap chiến thắng ở đâu?</h2>
+                <div class="cm-table">
+                    <div class="cm-row cm-header">
+                        <div class="cm-cell cm-label"></div>
+                        <div class="cm-cell cm-brand">Synap</div>
+                        <div class="cm-cell">Slack + Jira</div>
+                        <div class="cm-cell">MS Teams</div>
+                        <div class="cm-cell">Lark</div>
+                    </div>
+                    <div class="cm-row">
+                        <div class="cm-cell cm-label">All-in-One</div>
+                        <div class="cm-cell cm-brand"><span class="cm-yes">✓</span></div>
+                        <div class="cm-cell"><span class="cm-no">✗</span></div>
+                        <div class="cm-cell"><span class="cm-partial">△</span></div>
+                        <div class="cm-cell"><span class="cm-yes">✓</span></div>
+                    </div>
+                    <div class="cm-row cm-row--highlight">
+                        <div class="cm-cell cm-label cm-label--hl">Self-hosted <span class="cm-excl">Chỉ Synap</span></div>
+                        <div class="cm-cell cm-brand"><span class="cm-yes">✓</span></div>
+                        <div class="cm-cell"><span class="cm-no">✗</span></div>
+                        <div class="cm-cell"><span class="cm-no">✗</span></div>
+                        <div class="cm-cell"><span class="cm-no">✗</span></div>
+                    </div>
+                    <div class="cm-row cm-row--highlight">
+                        <div class="cm-cell cm-label cm-label--hl">Tuân thủ luật VN <span class="cm-excl">Chỉ Synap</span></div>
+                        <div class="cm-cell cm-brand"><span class="cm-yes">✓</span></div>
+                        <div class="cm-cell"><span class="cm-no">✗</span></div>
+                        <div class="cm-cell"><span class="cm-no">✗</span></div>
+                        <div class="cm-cell"><span class="cm-no">✗</span></div>
+                    </div>
+                    <div class="cm-row">
+                        <div class="cm-cell cm-label">AI nội bộ (RAG)</div>
+                        <div class="cm-cell cm-brand"><span class="cm-yes">✓</span></div>
+                        <div class="cm-cell"><span class="cm-no">✗</span></div>
+                        <div class="cm-cell"><span class="cm-partial">△</span></div>
+                        <div class="cm-cell"><span class="cm-partial">△</span></div>
+                    </div>
+                    <div class="cm-row">
+                        <div class="cm-cell cm-label">Zero-Download</div>
+                        <div class="cm-cell cm-brand"><span class="cm-yes">✓</span></div>
+                        <div class="cm-cell"><span class="cm-no">✗</span></div>
+                        <div class="cm-cell"><span class="cm-no">✗</span></div>
+                        <div class="cm-cell"><span class="cm-no">✗</span></div>
+                    </div>
+                    <div class="cm-row">
+                        <div class="cm-cell cm-label">Click-to-Task</div>
+                        <div class="cm-cell cm-brand"><span class="cm-yes">✓</span></div>
+                        <div class="cm-cell"><span class="cm-no">✗</span></div>
+                        <div class="cm-cell"><span class="cm-no">✗</span></div>
+                        <div class="cm-cell"><span class="cm-no">✗</span></div>
+                    </div>
+                </div>
+                <div class="cm-footer">
+                    <strong>Tiết kiệm 60–80%</strong> chi phí so với Slack + Jira · Làm chủ <strong>100%</strong> dữ liệu
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════ SLIDE 7 — BUSINESS MODEL ══════ -->
+        <section class="slide">
+            <div class="card layout-bm">
+                <div class="label-tag">07 — Mô hình kinh doanh</div>
+                <h2 class="section-title">B2B Freemium — 3 tầng chuyển đổi.</h2>
+                <div class="bm-tiers">
+                    <div class="tier">
+                        <div class="tier-sub">Phễu thu hút</div>
+                        <div class="tier-name">Community</div>
+                        <div class="tier-price">$0</div>
+                        <div class="tier-target">≤20 users · SaaS Cloud</div>
+                    </div>
+                    <div class="tier-arrow">→</div>
+                    <div class="tier tier--main">
+                        <div class="tier-badge">MRR</div>
+                        <div class="tier-name">Pro Cloud</div>
+                        <div class="tier-price">$6<span>/user/tháng</span></div>
+                        <div class="tier-target">SME 50–500 nhân sự</div>
+                    </div>
+                    <div class="tier-arrow">→</div>
+                    <div class="tier tier--enterprise">
+                        <div class="tier-sub tier-sub--gold">Air-gapped</div>
+                        <div class="tier-name">Enterprise</div>
+                        <div class="tier-price tier-price--gold">$2K<span>/năm</span></div>
+                        <div class="tier-target">Y tế · Tài chính · Nhà nước</div>
+                    </div>
+                </div>
+                <div class="bm-metrics">
+                    <div class="bm-metrics-label">HIỆU QUẢ KINH TẾ</div>
+                    <div class="bm-metrics-row">
+                        <div class="bm-m"><span class="bm-m-val bm-m-val--hl">LTV/CAC ≥ 3.2×</span></div>
+                        <div class="bm-sep"></div>
+                        <div class="bm-m"><span class="bm-m-label">Setup</span><span class="bm-m-val">15–30 Tr</span></div>
+                        <div class="bm-sep"></div>
+                        <div class="bm-m"><span class="bm-m-label">SLA 24/7</span><span class="bm-m-val">20%/năm</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════ SLIDE 8 — BUSINESS MODEL CANVAS (MASTERPIECE) ══════ -->
+        <section class="slide">
+            <div class="card layout-bmc-pro">
+                <div class="bmc-header">
+                    <div class="label-tag">08 — Mô hình kinh doanh tổng thể</div>
+                    <h2 class="section-title">Mô hình kinh doanh cốt lõi.</h2>
+                </div>
+                
+                <div class="bmc-canvas-grid">
+                    <!-- 1. Key Partners -->
+                    <div class="bmc-box bmc-box--partners">
+                        <div class="bmc-box-head">Đối tác</div>
+                        <ul class="bmc-items">
+                            <li>Hetzner &amp; AWS</li>
+                            <li>Cộng đồng OSS</li>
+                            <li>Kênh phân phối</li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. Key Activities -->
+                    <div class="bmc-box bmc-box--activities">
+                        <div class="bmc-box-head">Hoạt động</div>
+                        <ul class="bmc-items">
+                            <li>Core AI</li>
+                            <li>Vận hành hạ tầng</li>
+                            <li>B2B Sales</li>
+                        </ul>
+                    </div>
+
+                    <!-- 3. Key Resources -->
+                    <div class="bmc-box bmc-box--resources">
+                        <div class="bmc-box-head">Nguồn lực</div>
+                        <ul class="bmc-items">
+                            <li>Core Team 4 Kỹ sư</li>
+                            <li>Go, Vue, Local AI</li>
+                            <li>Zero-Download</li>
+                        </ul>
+                    </div>
+
+                    <!-- 4. Value Proposition (THE HERO) -->
+                    <div class="bmc-box bmc-box--value">
+                        <div class="bmc-box-head text-cyan">Đề xuất giá trị</div>
+                        <div class="bmc-value-cards">
+                            <div class="v-card">
+                                <strong>All-in-One OS</strong>
+                                <span>Tích hợp Chat, Task, Docs, AI</span>
+                            </div>
+                            <div class="v-card">
+                                <strong>Bảo mật tuyệt đối</strong>
+                                <span>Dữ liệu không rời máy chủ</span>
+                            </div>
+                            <div class="v-card">
+                                <strong>Tối ưu chi phí</strong>
+                                <span>Tiết kiệm 80% so với Slack</span>
+                            </div>
+                            <div class="v-card">
+                                <strong>Chủ quyền số</strong>
+                                <span>Tuân thủ 100% luật VN</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Customer Relationships -->
+                    <div class="bmc-box bmc-box--relations">
+                        <div class="bmc-box-head">Quan hệ</div>
+                        <ul class="bmc-items">
+                            <li>PLG (Miễn phí)</li>
+                            <li>Hỗ trợ 24/7 SLA</li>
+                            <li>Webinar</li>
+                        </ul>
+                    </div>
+
+                    <!-- 6. Channels -->
+                    <div class="bmc-box bmc-box--channels">
+                        <div class="bmc-box-head">Kênh tiếp cận</div>
+                        <ul class="bmc-items">
+                            <li>Tech Blog</li>
+                            <li>Direct Sales</li>
+                            <li>Sự kiện</li>
+                        </ul>
+                    </div>
+
+                    <!-- 7. Customer Segments -->
+                    <div class="bmc-box bmc-box--segments">
+                        <div class="bmc-box-head">Khách hàng</div>
+                        <ul class="bmc-items">
+                            <li>SMEs (50-500 NV)</li>
+                            <li>Y tế, Tài chính</li>
+                            <li>Khối Nhà nước</li>
+                        </ul>
+                    </div>
+
+                    <!-- 8. Cost Structure -->
+                    <div class="bmc-box bmc-box--costs">
+                        <div class="bmc-box-head">Cơ cấu chi phí</div>
+                        <div class="bmc-finance-grid">
+                            <div class="f-item"><span class="f-val text-cyan">60%</span> <span class="f-lbl">R&amp;D</span></div>
+                            <div class="f-item"><span class="f-val text-indigo">20%</span> <span class="f-lbl">Marketing</span></div>
+                            <div class="f-item"><span class="f-val text-gold">10%</span> <span class="f-lbl">Cloud/GPU</span></div>
+                            <div class="f-item"><span class="f-val text-dim">10%</span> <span class="f-lbl">Dự phòng</span></div>
+                        </div>
+                    </div>
+
+                    <!-- 9. Revenue Streams -->
+                    <div class="bmc-box bmc-box--revenue">
+                        <div class="bmc-box-head text-gold">Dòng doanh thu</div>
+                        <div class="bmc-finance-grid">
+                            <div class="f-item"><span class="f-val text-gold">$6</span> <span class="f-lbl">/user/tháng</span></div>
+                            <div class="f-item"><span class="f-val text-gold">$2K</span> <span class="f-lbl">/năm (Enterprise)</span></div>
+                            <div class="f-item"><span class="f-val text-gold">15-30M</span> <span class="f-lbl">Phí Setup</span></div>
+                            <div class="f-item"><span class="f-val text-gold">20%</span> <span class="f-lbl">Bảo trì/năm</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════ SLIDE 9 — GTM FUNNEL ══════ -->
+        <section class="slide">
+            <div class="card layout-funnel">
+                <div class="label-tag">09 — Kênh tiếp cận khách hàng</div>
+                <h2 class="section-title">Tăng trưởng từ Sản phẩm (PLG) &amp; Bán hàng B2B (ABM).</h2>
+
+                <div class="funnel-visual">
+                    <div class="funnel-bar funnel-bar--tofu">
+                        <div class="fb-left">
+                            <span class="fb-stage fb-stage--cyan">TOFU</span>
+                            <span class="fb-name">Thu hút</span>
+                        </div>
+                        <div class="fb-right">
+                            <span class="fb-channel">GitHub OSS · Blog · Tech Events</span>
+                            <span class="fb-kpi fb-kpi--cyan">10K visitors/tháng</span>
+                        </div>
+                    </div>
+                    <div class="funnel-bar funnel-bar--mofu">
+                        <div class="fb-left">
+                            <span class="fb-stage fb-stage--indigo">MOFU</span>
+                            <span class="fb-name">Trải nghiệm</span>
+                        </div>
+                        <div class="fb-right">
+                            <span class="fb-channel">Community Edition · Webinar · Trial 30 ngày</span>
+                            <span class="fb-kpi fb-kpi--indigo">500 signups/tháng</span>
+                        </div>
+                    </div>
+                    <div class="funnel-bar funnel-bar--bofu">
+                        <div class="fb-left">
+                            <span class="fb-stage fb-stage--gold">BOFU</span>
+                            <span class="fb-name">Chuyển đổi</span>
+                        </div>
+                        <div class="fb-right">
+                            <span class="fb-channel">Direct ABM Sales · PoC 90 ngày</span>
+                            <span class="fb-kpi fb-kpi--gold">5–10% conversion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════ SLIDE 10 — ROADMAP ══════ -->
+        <section class="slide">
+            <div class="card layout-roadmap">
+                <div class="label-tag">10 — Lộ trình triển khai</div>
+                <h2 class="section-title">18 tháng tới điểm hòa vốn.</h2>
+                <div class="rm-connector">
+                    <div class="rm-dot"></div>
+                    <div class="rm-line"></div>
+                    <div class="rm-dot rm-dot--cyan"></div>
+                    <div class="rm-line rm-line--cyan"></div>
+                    <div class="rm-dot rm-dot--gold"></div>
+                </div>
+                <div class="rm-timeline">
+                    <div class="rm-phase">
+                        <span class="rm-time">Tháng 1–6</span>
+                        <h3 class="rm-name">Pilot</h3>
+                        <ul class="rm-list">
+                            <li>Launch Open-source</li>
+                            <li>Early Adopters testing</li>
+                        </ul>
+                        <div class="rm-kpi-box">
+                            <div class="rm-kpi-val">10</div>
+                            <div class="rm-kpi-lbl">DN Pilot</div>
+                        </div>
+                    </div>
+                    <div class="rm-phase rm-phase--cyan">
+                        <span class="rm-time text-cyan">Tháng 7–18</span>
+                        <h3 class="rm-name">Scale</h3>
+                        <ul class="rm-list">
+                            <li>Flutter Mobile App</li>
+                            <li>Hybrid AI RAG</li>
+                        </ul>
+                        <div class="rm-kpi-box rm-kpi-box--cyan">
+                            <div class="rm-kpi-val">50–200</div>
+                            <div class="rm-kpi-lbl">Pro Cloud KH</div>
+                        </div>
+                    </div>
+                    <div class="rm-phase rm-phase--gold">
+                        <span class="rm-time text-gold">Tháng 18+</span>
+                        <h3 class="rm-name">Enterprise</h3>
+                        <ul class="rm-list">
+                            <li>Air-gapped Package</li>
+                            <li>Ngân hàng · Y tế</li>
+                        </ul>
+                        <div class="rm-kpi-box rm-kpi-box--gold">
+                            <div class="rm-kpi-val">Series A</div>
+                            <div class="rm-kpi-lbl">Gọi vốn</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════ SLIDE 11 — FINANCIAL ══════ -->
+        <section class="slide">
+            <div class="card layout-financial">
+                <div class="fin-header-row">
+                    <div>
+                        <div class="label-tag">11 — Kế hoạch tài chính</div>
+                        <h2 class="section-title">Pre-Seed: 4.8 Tỷ VNĐ</h2>
+                    </div>
+                    <div class="fin-runway">
+                        Runway<br><strong>18–24 tháng</strong>
+                    </div>
+                </div>
+                <div class="fin-body">
+                    <div class="fin-alloc">
+                        <h3 class="fin-sub">Phân bổ vốn</h3>
+                        <div class="alloc-bars">
+                            <div class="alloc-item">
+                                <div class="alloc-info"><span>R&amp;D &amp; Nhân sự (60%)</span><strong>2.88 Tỷ</strong></div>
+                                <div class="alloc-bar"><div class="ab-fill" style="width:60%;background:var(--cyan)"></div></div>
+                            </div>
+                            <div class="alloc-item">
+                                <div class="alloc-info"><span>Sales &amp; Marketing (20%)</span><strong>960 Tr</strong></div>
+                                <div class="alloc-bar"><div class="ab-fill" style="width:20%;background:var(--indigo)"></div></div>
+                            </div>
+                            <div class="alloc-item">
+                                <div class="alloc-info"><span>Cloud &amp; GPU (10%)</span><strong>480 Tr</strong></div>
+                                <div class="alloc-bar"><div class="ab-fill" style="width:10%;background:var(--gold)"></div></div>
+                            </div>
+                            <div class="alloc-item">
+                                <div class="alloc-info"><span>Dự phòng (10%)</span><strong>480 Tr</strong></div>
+                                <div class="alloc-bar"><div class="ab-fill" style="width:10%;background:var(--text-dim)"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fin-proj">
+                        <h3 class="fin-sub">Dự phóng 3 năm</h3>
+                        <div class="proj-grid">
+                            <div class="pj-card">
+                                <div class="pj-year">Năm 1</div>
+                                <div class="pj-rev">610 Tr</div>
+                            </div>
+                            <div class="pj-card pj-card--hl">
+                                <div class="pj-badge">Break-even</div>
+                                <div class="pj-year text-cyan">Tháng 21</div>
+                                <div class="pj-rev text-cyan">~60 KH</div>
+                            </div>
+                            <div class="pj-card">
+                                <div class="pj-year">Năm 2</div>
+                                <div class="pj-rev">6.5 Tỷ</div>
+                            </div>
+                            <div class="pj-card">
+                                <div class="pj-year">Năm 3</div>
+                                <div class="pj-rev">23.5 Tỷ</div>
+                                <div class="pj-sub">~1M USD MRR</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════ SLIDE 12 — LIVE DEMO ══════ -->
+        <section class="slide">
+            <div class="card layout-demo">
+                <div class="demo-content">
+                    <img src="logo_synap.png" alt="Synap" class="demo-logo">
+                    <h1 class="demo-main">LIVE DEMO</h1>
+                    <p class="demo-env">Trực tiếp trên môi trường thực tế</p>
+                    <div class="demo-checklist">
+                        <div class="dc-item"><span class="dc-idx">01</span>Tốc độ phản hồi &lt;100ms</div>
+                        <div class="dc-item"><span class="dc-idx">02</span>Zero-Download &amp; Watermark</div>
+                        <div class="dc-item"><span class="dc-idx">03</span>Click-to-Task</div>
+                        <div class="dc-item"><span class="dc-idx">04</span>Local RAG AI</div>
+                    </div>
+                    <div class="demo-url">app.bbun.click</div>
+                    <div class="live-dot"><span></span>03 PHÚT DEMO</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════ SLIDE 13 — Q&A ══════ -->
+        <section class="slide">
+            <div class="card layout-qa">
+                <div class="qa-content">
+                    <img src="logo_synap.png" alt="Synap" class="qa-logo">
+                    <h1 class="qa-main">HỎI ĐÁP &amp; PHẢN BIỆN</h1>
+                    <p class="qa-invite">Kính mời Hội đồng đặt câu hỏi</p>
+                    <div class="qa-topics">
+                        <div class="qa-topic"><span class="qa-num">01</span>Công nghệ &amp; Kiến trúc</div>
+                        <div class="qa-topic"><span class="qa-num">02</span>Bảo mật &amp; Triển khai</div>
+                        <div class="qa-topic"><span class="qa-num">03</span>Tài chính &amp; Mở rộng</div>
+                        <div class="qa-topic"><span class="qa-num">04</span>Thương mại hóa</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════ SLIDE 14 — THANK YOU ══════ -->
+        <section class="slide">
+            <div class="card layout-ty">
+                <div class="ty-content">
+                    <img src="logo_synap.png" alt="Synap" class="ty-logo">
+                    <h1 class="ty-main">CẢM ƠN!</h1>
+                    <div class="ty-divider"></div>
+                    <div class="ty-brand">SYNAP — BUSINESS OS</div>
+                    <p class="ty-tagline">"Tomorrow Begins with Trust"</p>
+                    <div class="ty-contact">
+                        <div class="ty-ci"><span class="ci-lbl">WEB</span>app.bbun.click</div>
+                        <div class="ty-sep">·</div>
+                        <div class="ty-ci"><span class="ci-lbl">EMAIL</span>synap.businessos@gmail.com</div>
+                    </div>
+                    <div class="ty-team">
+                        Trần Võ Hữu Tài · Lu Nhựt Đình · Phan Trung Kiên · Phạm Nguyễn Hoàng Anh
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <div id="custom-cursor"></div>
+    <script src="script.js"></script>
+</body>
+</html>
